@@ -1,1 +1,1 @@
-# stablenet.github.io
+# https://free-proxy-nodes.github.io
