@@ -20,55 +20,59 @@
                     <div class="content">
                         <div class="content-top">
                             <h2>请 Ctrl+D 收藏本页到浏览器收藏夹</h2>
-                            <p style="color: red;"
-                                        >⚠️
-                                        最新可用站点将第一时间在此更新。
+                            <p style="color: brown; ">
+                                ⚠️ 最新可用站点将第一时间在此更新。<br />
+                                <span style="font-weight: bold; color:red;">
+                                    请收藏本页，以防失联！</span
+                                >
                             </p>
-                            <p style="color: red;"
+                            <div id="sitelist">
+                                <ul>
+                                    <li>
+                                        <span
+                                            style="font-weight: 600; color: black"
+                                            >稳联云 官方地址（主站）</span
                                         >
-                                        请收藏本页，以防失联！
-                            </p>
-                            <ul>
-                                <li>
-                                    <span style="font-weight: 600; color: black"
-                                        >稳联云 官方地址（主站）</span
-                                    >
-                                    <a
-                                        href="http://vip07.stableconnect.cloud/"
-                                        target="_blank"
-                                        id="wangZhan1"
-                                        ><i id="wangZhan1XianShi"
-                                            >http://vip07.stableconnect.cloud/</i
-                                        ></a
-                                    >
-                                </li>
-                                <li>
-                                    <span style="font-weight: 600; color: black"
-                                        >稳联云 官方地址（备用1）</span
-                                    >
-                                    <a
-                                        href="https://vip15.20250920.top/"
-                                        target="_blank"
-                                        id="wangZhan2"
-                                        ><i id="wangZhan2XianShi"
-                                            >https://vip15.20250920.top/</i
-                                        ></a
-                                    >
-                                </li>
-                                <li>
-                                    <span style="font-weight: 600; color: black"
-                                        >稳联云 官方地址（备用2 - 新UI）</span
-                                    >
-                                    <a
-                                        href="https://bak003.20250710.top"
-                                        target="_blank"
-                                        id="wangZhan2"
-                                        ><i id="wangZhan2XianShi"
-                                            >https://bak003.20250710.top</i
-                                        ></a
-                                    >
-                                </li>
-                            </ul>
+                                        <a
+                                            href="http://vip07.stableconnect.cloud/"
+                                            target="_blank"
+                                            id="wangZhan1"
+                                            ><i id="wangZhan1XianShi"
+                                                >http://vip07.stableconnect.cloud/</i
+                                            ></a
+                                        >
+                                    </li>
+                                    <li>
+                                        <span
+                                            style="font-weight: 600; color: black"
+                                            >稳联云 官方地址（备用1）</span
+                                        >
+                                        <a
+                                            href="https://vip15.20250920.top/"
+                                            target="_blank"
+                                            id="wangZhan2"
+                                            ><i id="wangZhan2XianShi"
+                                                >https://vip15.20250920.top/</i
+                                            ></a
+                                        >
+                                    </li>
+                                    <li>
+                                        <span
+                                            style="font-weight: 600; color: black"
+                                            >稳联云 官方地址（备用2 -
+                                            新UI）</span
+                                        >
+                                        <a
+                                            href="https://bak003.20250710.top"
+                                            target="_blank"
+                                            id="wangZhan2"
+                                            ><i id="wangZhan2XianShi"
+                                                >https://bak003.20250710.top</i
+                                            ></a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <p class="footer">
@@ -90,13 +94,17 @@
             </div>
         </div>
         <script>
+
+            function huoQuChanShu(minZi) {
+
+                const url = window.location.href;
+                const codeMatch = url.match(/code=([^&]*)/);
+                const code = codeMatch ? codeMatch[1] : null;
+                return code
+
+            }
+
             window.onload = function () {
-                function huoQuChanShu(minZi) {
-                    const url = window.location.href;
-                    const codeMatch = url.match(/code=([^&]*)/);
-                    const code = codeMatch ? codeMatch[1] : null;
-                    return code
-                }
 
                     let ma = huoQuChanShu("code");
                     try{
@@ -111,6 +119,7 @@
                             }
                         }
                     }catch(e){}
+
             }
         </script>
     </body>
