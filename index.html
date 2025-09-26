@@ -31,20 +31,6 @@
                                     <li>
                                         <span
                                             style="font-weight: 600; color: black"
-                                            >稳联云 官方地址（主站）</span
-                                        >
-                                        <a
-                                            href="http://vip07.stableconnect.cloud/"
-                                            target="_blank"
-                                            id="wangZhan1"
-                                            ><i id="wangZhan1XianShi"
-                                                >http://vip07.stableconnect.cloud/</i
-                                            ></a
-                                        >
-                                    </li>
-                                    <li>
-                                        <span
-                                            style="font-weight: 600; color: black"
                                             >稳联云 官方地址（备用1）</span
                                         >
                                         <a
@@ -53,21 +39,6 @@
                                             id="wangZhan2"
                                             ><i id="wangZhan2XianShi"
                                                 >https://vip15.20250920.top/</i
-                                            ></a
-                                        >
-                                    </li>
-                                    <li>
-                                        <span
-                                            style="font-weight: 600; color: black"
-                                            >稳联云 官方地址（备用2 -
-                                            新UI）</span
-                                        >
-                                        <a
-                                            href="https://bak003.20250710.top"
-                                            target="_blank"
-                                            id="wangZhan2"
-                                            ><i id="wangZhan2XianShi"
-                                                >https://bak003.20250710.top</i
                                             ></a
                                         >
                                     </li>
@@ -120,6 +91,40 @@
                         }
                     }catch(e){}
 
+                    const listElement = document.getElementById('sitelist');
+                    let html = "<ul>";
+                    sites= [
+                        {
+                            name: "稳联云 官方地址（主站）",
+                            url: "http://vip07.stableconnect.cloud/"
+                        },
+                        {
+                            name: "稳联云 官方地址（备用1）",
+                            url: "https://vip15.20250920.top/"
+                        },
+                        {
+                            name: "稳联云 官方地址（备用2 - 新UI）",
+                            url: "https://bak003.20250710.top/"
+                        }
+                    ];
+                    sites.forEach((site, index) => {
+                        html +=    `<li>
+                                    <span
+                                        style="font-weight: bold; color: black"
+                                        >${site.name}</span
+                                    >
+                                    <a
+                                        href="${site.url}"
+                                        target="_blank"
+                                        id="wangZhan1"
+                                        ><i id="wangZhan1XianShi"
+                                            >${site.url}</i
+                                        ></a
+                                    >
+                                </li>`;
+                    })
+                    html += "</ul>";
+                    listElement.innerHTML = html;
             }
         </script>
     </body>
